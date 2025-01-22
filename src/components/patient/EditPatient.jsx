@@ -180,16 +180,16 @@ const EditPatient = ({ patient }) => {
             onChange={handleChange}
             className="outline-none w-1/2 bg-[--baseColor] border rounded px-5 py-3 font-mono text-md"
           >
-            <option className="bg-[#1c1c1c]" disabled>
+            <option className="bg-[--SecondaryBase]" disabled>
               Select Gender
             </option>
-            <option className="bg-[#1c1c1c]" value="Other">
+            <option className="bg-[--SecondaryBase]" value="Other">
               Other
             </option>
-            <option className="bg-[#1c1c1c]" value="Male">
+            <option className="bg-[--SecondaryBase]" value="Male">
               Male
             </option>
-            <option className="bg-[#1c1c1c]" value="Female">
+            <option className="bg-[--SecondaryBase]" value="Female">
               Female
             </option>
           </select>

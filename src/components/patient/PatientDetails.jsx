@@ -19,17 +19,39 @@ const PatientDetails = ({ patient }) => {
         </thead>
         <tbody className="font-light ">
           <tr className="flex flex-col">
-            <td className="font-light text-stone-600">{patient.name}</td>
+            <td className="font-light text-stone-600">{patient?.name}</td>
             <td className="font-light text-stone-600 font-mono">
-              {new Date(patient.DOB).toLocaleDateString("sv-SE")}
+              {new Date(patient?.DOB).toLocaleDateString("sv-SE")}
             </td>
-            <td className="font-light text-stone-600">{patient.gender}</td>
-            <td className="font-light text-stone-600">{patient.email}</td>
-            <td className="font-light text-stone-600">{patient.address}</td>
+            <td className="font-light text-stone-600">{patient?.gender}</td>
+            <td className="font-light text-stone-600">
+              {patient?.email ? (
+                patient?.email
+              ) : (
+                <p className="text-amber-700">null</p>
+              )}
+            </td>
+            <td className="font-light text-stone-600">
+              {patient?.address ? (
+                patient?.address
+              ) : (
+                <p className="text-amber-700">null</p>
+              )}
+            </td>
             <td className="font-light text-stone-600 font-mono">
-              {patient.mobile}
+              {patient?.mobile ? (
+                patient?.mobile
+              ) : (
+                <p className="text-amber-700">null</p>
+              )}
             </td>
-            <td className="font-light text-stone-600">{patient.conditions}</td>
+            <td className="font-light text-stone-600">
+              {patient?.conditions ? (
+                patient?.conditions
+              ) : (
+                <p className="text-amber-700">null</p>
+              )}
+            </td>
           </tr>
         </tbody>
       </table>

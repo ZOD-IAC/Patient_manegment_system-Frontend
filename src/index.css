@@ -10,11 +10,14 @@
   --textColor: black;
   --textHeadColor: #fff;
 }
+
 /* :root {
   --bgColor: #1c1c1c;
   --baseColor: #2e2e2e;
+  --SecondaryBase: dimgray;
   --HeadColor: rgb(0, 149, 255);
-  --textColor: whitesmoke;
+  --textColor: #fff;
+  --textHeadColor: #fff;
 } */
 
 * {
@@ -30,7 +33,7 @@ input {
   /* color-scheme: dark; */
 }
 input::placeholder {
-  color: #222222a7;
+  color: var(--textColor);
 }
 
 input:focus {

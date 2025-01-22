@@ -36,6 +36,7 @@ const TreatmentForm = ({ id, treatments }) => {
         return; // Exit early if the response is not OK
       }
       const data = await response.json();
+      window.location.reload();
       //clear form on submit successfully
       setTreatment({
         patientId: id, // Keep the patientId if needed
